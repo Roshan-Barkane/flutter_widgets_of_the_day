@@ -10,10 +10,12 @@ class SafeAreaWidget extends StatefulWidget {
 class _SafeAreaWidgetState extends State<SafeAreaWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text(
-        "SafeArea",
-        style: TextStyle(fontSize: 35),
+    return const SafeArea(
+      child: Scaffold(
+        body: Text(
+          "SafeArea",
+          style: TextStyle(fontSize: 35),
+        ),
       ),
     );
   }
