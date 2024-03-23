@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class ExpandedWidget extends StatefulWidget {
@@ -14,13 +15,32 @@ class _ExpandedWidgetState extends State<ExpandedWidget> {
       child: Scaffold(
         body: Column(
           children: [
-            Container(
-              height: 200,
-              color: Colors.red,
+            Expanded(
+              flex: 1,
+              child: Container(
+                  height: 200,
+                  color: Colors.red,
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (BuildContext context, index) {
+                        return const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: CircleAvatar(
+                            radius: 40,
+                            child: Text(
+                              "A",
+                              style: TextStyle(fontSize: 30),
+                            ),
+                          ),
+                        );
+                      })),
             ),
-            Container(
-              height: 200,
-              color: Colors.orange,
+            Expanded(
+              flex: 5,
+              child: Container(
+                height: 200,
+                color: Colors.orange,
+              ),
             ),
             Container(
               height: 200,
