@@ -9,7 +9,7 @@ class WrapPage extends StatelessWidget {
       body: Center(
         child: Container(
           color: Colors.grey.shade300,
-          child: Row(
+          child: Wrap(
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
