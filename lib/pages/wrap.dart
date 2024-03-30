@@ -12,6 +12,7 @@ class WrapPage extends StatelessWidget {
           child: Wrap(
             // wrap widget is a resolve the overflow condition in row & column widget
             // this widget make help build gallry patter in just five second.
+            direction: Axis.vertical,
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
