@@ -18,22 +18,24 @@ class _ExpandedWidgetState extends State<ExpandedWidget> {
             Expanded(
               flex: 1,
               child: Container(
-                  height: 200,
-                  color: Colors.red,
-                  child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (BuildContext context, index) {
-                        return const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: CircleAvatar(
-                            radius: 40,
-                            child: Text(
-                              "A",
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          ),
-                        );
-                      })),
+                height: 200,
+                color: Colors.red,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context, index) {
+                    return const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: CircleAvatar(
+                        radius: 40,
+                        child: Text(
+                          "A",
+                          style: TextStyle(fontSize: 30),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
             ),
             Expanded(
               flex: 5,
