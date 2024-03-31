@@ -11,6 +11,7 @@ class _Animation_ContainerState extends State<Animation_Container> {
   var _size = 200.0;
   var _Takecolor = 0xFF00BB00;
   var _TextColor = 0xFF000000;
+  var _TextSize = 18.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +29,12 @@ class _Animation_ContainerState extends State<Animation_Container> {
               child: Center(
                   child: Text(
                 "Animation Controller",
-                style: TextStyle(color: Color(_TextColor)),
+                style: TextStyle(color: Color(_TextColor), fontSize: _TextSize),
               )),
             ),
+          ),
+          SizedBox(
+            height: 40,
           ),
           ElevatedButton(
             onPressed: () {
@@ -38,9 +42,13 @@ class _Animation_ContainerState extends State<Animation_Container> {
                 _size = 300;
                 _Takecolor = 0xFFaa00bb;
                 _TextColor = 0xFFFFFFFF;
+                _TextSize = 26;
               });
             },
-            child: Text("Action"),
+            child: Text(
+              "Action",
+              style: TextStyle(fontSize: 28),
+            ),
           ),
         ],
       ),
