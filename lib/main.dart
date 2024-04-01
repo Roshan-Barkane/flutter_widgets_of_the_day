@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets_of_the_day/pages/animationcontainer.dart';
 import 'package:flutter_widgets_of_the_day/pages/expanded.dart';
+import 'package:flutter_widgets_of_the_day/pages/opacity.dart';
 import 'package:flutter_widgets_of_the_day/pages/safearea.dart';
 import 'package:flutter_widgets_of_the_day/pages/wrap.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Animation_Container(),
+      home: const OpacityWidget(),
     );
   }
 }
