@@ -33,7 +33,7 @@ class _Animation_ContainerState extends State<Animation_Container> {
               )),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           ElevatedButton(
