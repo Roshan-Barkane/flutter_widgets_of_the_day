@@ -9,6 +9,9 @@ class FutureBuilderPage extends StatefulWidget {
 
 class _FutureBuilderPageState extends State<FutureBuilderPage> {
   Future<int> futureFunction() async {
+    await Future.delayed(
+      Duration(seconds: 2),
+    );
     return 0;
   }
 
@@ -17,11 +20,20 @@ class _FutureBuilderPageState extends State<FutureBuilderPage> {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // this function is used futureBuilder in work on api intrication handle the situation
             FutureBuilder(
               future: futureFunction(),
               builder: (context, snapshot) {
-                return Text(snapshot.data.toString());
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return CircularProgressIndicator();
+                } else {
+                  return Text(
+                    snapshot.data.toString(),
+                    style: TextStyle(fontSize: 25),
+                  );
+                }
               },
             )
           ],
