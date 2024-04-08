@@ -16,8 +16,25 @@ class _FaceTransistionState extends State<FaceTransistion>
 
   late final Animation<double> _animation =
       CurvedAnimation(parent: _controller, curve: Curves.easeIn);
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: FadeTransition(
+          opacity: _animation,
+          child: const FlutterLogo(
+            size: 300,
+          ),
+        ),
+      ),
+    );
   }
 }
