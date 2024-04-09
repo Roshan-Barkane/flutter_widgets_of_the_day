@@ -16,17 +16,22 @@ class _FloatingActionButtonWidgetState
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: _color,
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
-        elevation: 0,
+        /* elevation: 0,
         shape: const BeveledRectangleBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(20),
-            ),
-            side: BorderSide(
-                color: Colors.cyan, width: 2, style: BorderStyle.solid)),
+          borderRadius: BorderRadius.all(
+            Radius.circular(20),
+          ),
+          side: BorderSide(
+            color: Colors.cyan,
+            width: 2,
+            style: BorderStyle.solid,
+          ),
+        ),*/
+        mini: true,
         child: const Icon(
           Icons.add,
           size: 40,
