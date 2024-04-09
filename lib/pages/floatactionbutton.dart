@@ -18,8 +18,17 @@ class _FloatingActionButtonWidgetState
       backgroundColor: _color,
       floatingActionButtonLocation: FloatingActionButtonLocation.miniStartFloat,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+        elevation: 0,
+        shape: const BeveledRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(20),
+            ),
+            side: BorderSide(
+                color: Colors.cyan, width: 2, style: BorderStyle.solid)),
         child: const Icon(
-          Icons.add_a_photo,
+          Icons.add,
           size: 40,
         ),
         onPressed: () {
