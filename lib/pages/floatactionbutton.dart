@@ -14,6 +14,7 @@ class _FloatingActionButtonWidgetState
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.purple,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
       floatingActionButton: FloatingActionButton(
         child: const Icon(
           Icons.add_a_photo,
