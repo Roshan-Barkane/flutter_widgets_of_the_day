@@ -16,7 +16,7 @@ class _FloatingActionButtonWidgetState
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: _color,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
@@ -31,7 +31,7 @@ class _FloatingActionButtonWidgetState
             style: BorderStyle.solid,
           ),
         ),*/
-        mini: true,
+        // mini: true,
         child: const Icon(
           Icons.add,
           size: 40,
@@ -45,6 +45,66 @@ class _FloatingActionButtonWidgetState
             }
           });
         },
+      ),
+      bottomNavigationBar: const BottomAppBar(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: EdgeInsets.all(5.0),
+              child: Column(
+                children: [
+                  Icon(
+                    Icons.home,
+                  ),
+                  Text(
+                    "Home",
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(5.0),
+              child: Column(
+                children: [
+                  Icon(
+                    Icons.shop,
+                  ),
+                  Text(
+                    "Shop",
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(5.0),
+              child: Column(
+                children: [
+                  Icon(
+                    Icons.favorite,
+                  ),
+                  Text(
+                    "Fav",
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(5.0),
+              child: Column(
+                children: [
+                  Icon(
+                    Icons.settings,
+                  ),
+                  Text(
+                    "Setting",
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
