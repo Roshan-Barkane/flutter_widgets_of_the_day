@@ -10,8 +10,8 @@ class FloatingActionButtonWidget extends StatefulWidget {
 
 class _FloatingActionButtonWidgetState
     extends State<FloatingActionButtonWidget> {
-  Color _color = new Color.fromARGB(255, 156, 39, 176);
-
+  Color _color = Color.fromARGB(255, 250, 226, 254);
+  var _text = "Initpage";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,17 +20,17 @@ class _FloatingActionButtonWidgetState
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
-        /* elevation: 0,
+        elevation: 0,
         shape: const BeveledRectangleBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(20),
+            Radius.circular(15),
           ),
-          side: BorderSide(
+          /* side: BorderSide(
             color: Colors.cyan,
             width: 2,
             style: BorderStyle.solid,
-          ),
-        ),*/
+          ),*/
+        ),
         // mini: true,
         child: const Icon(
           Icons.add,
@@ -38,72 +38,121 @@ class _FloatingActionButtonWidgetState
         ),
         onPressed: () {
           setState(() {
-            if (_color == Colors.purple) {
+            if (_color != Colors.yellow) {
               _color = Colors.yellow;
-            } else {
-              _color = Colors.purple;
             }
           });
         },
       ),
-      bottomNavigationBar: const BottomAppBar(
+      bottomNavigationBar: BottomAppBar(
+        padding: EdgeInsets.only(bottom: 10),
+        notchMargin: 10.0,
+        shape: const CircularNotchedRectangle(),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           mainAxisSize: MainAxisSize.max,
           children: [
-            Padding(
-              padding: EdgeInsets.all(5.0),
-              child: Column(
-                children: [
-                  Icon(
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      if (_color != Colors.red) {
+                        _color = Colors.red;
+                        _text = "Home Page";
+                      }
+                    });
+                  },
+                  icon: const Icon(
                     Icons.home,
+                    color: Colors.red,
                   ),
-                  Text(
-                    "Home",
-                  )
-                ],
-              ),
+                ),
+                const Text(
+                  "Home",
+                  style: TextStyle(color: Colors.black),
+                )
+              ],
             ),
-            Padding(
-              padding: EdgeInsets.all(5.0),
-              child: Column(
-                children: [
-                  Icon(
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      if (_color != Colors.purple) {
+                        _color = Colors.purple;
+                        _text = "Shoping Page";
+                      }
+                    });
+                  },
+                  icon: const Icon(
                     Icons.shop,
+                    color: Colors.purple,
                   ),
-                  Text(
-                    "Shop",
-                  )
-                ],
-              ),
+                ),
+                const Text(
+                  "Shop",
+                  style: TextStyle(color: Colors.black),
+                )
+              ],
             ),
-            Padding(
-              padding: EdgeInsets.all(5.0),
-              child: Column(
-                children: [
-                  Icon(
+            const SizedBox(
+              width: 15,
+            ),
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      if (_color != Colors.blue) {
+                        _color = Colors.blue;
+                        _text = "Favirate Page";
+                      }
+                    });
+                  },
+                  icon: const Icon(
                     Icons.favorite,
+                    color: Colors.blue,
                   ),
-                  Text(
-                    "Fav",
-                  )
-                ],
-              ),
+                ),
+                const Text(
+                  "Fav",
+                  style: TextStyle(color: Colors.black),
+                )
+              ],
             ),
-            Padding(
-              padding: EdgeInsets.all(5.0),
-              child: Column(
-                children: [
-                  Icon(
+            Column(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      if (_color != Colors.deepOrange) {
+                        _color = Colors.deepOrange;
+                        _text = "Setting Page";
+                      }
+                    });
+                  },
+                  icon: const Icon(
                     Icons.settings,
+                    color: Colors.deepOrange,
                   ),
-                  Text(
-                    "Setting",
-                  )
-                ],
-              ),
+                ),
+                const Text(
+                  "Setting",
+                  style: TextStyle(color: Colors.black),
+                )
+              ],
             )
           ],
+        ),
+      ),
+      body: Center(
+        child: Text(
+          _text,
+          style: const TextStyle(
+            fontSize: 60,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
