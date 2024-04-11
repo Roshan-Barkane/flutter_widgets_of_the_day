@@ -138,7 +138,7 @@ class row extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _index == 2
+        _index == 0
             ? const Icon(
                 Icons.circle,
                 color: Colors.blue,
@@ -146,7 +146,18 @@ class row extends StatelessWidget {
               )
             : const Icon(
                 Icons.circle,
-                color: Colors.black,
+                color: Colors.grey,
+                size: 20,
+              ),
+        _index == 1
+            ? const Icon(
+                Icons.circle,
+                color: Colors.blue,
+                size: 20,
+              )
+            : const Icon(
+                Icons.circle,
+                color: Colors.grey,
                 size: 20,
               ),
         _index == 2
@@ -157,18 +168,7 @@ class row extends StatelessWidget {
               )
             : const Icon(
                 Icons.circle,
-                color: Colors.black,
-                size: 20,
-              ),
-        _index == 3
-            ? const Icon(
-                Icons.circle,
-                color: Colors.blue,
-                size: 20,
-              )
-            : const Icon(
-                Icons.circle,
-                color: Colors.black,
+                color: Colors.grey,
                 size: 20,
               ),
       ],
