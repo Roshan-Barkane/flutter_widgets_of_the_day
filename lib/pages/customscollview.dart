@@ -8,7 +8,7 @@ class CustomScrollViewWidget extends StatefulWidget {
 }
 
 class _CustomScrollViewWidgetState extends State<CustomScrollViewWidget> {
-  int count = 10;
+  List count = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,12 +49,10 @@ class _CustomScrollViewWidgetState extends State<CustomScrollViewWidget> {
             ),
           ),
           SliverList(
-            delegate: SliverChildBuilderDelegate((context, index) {
-              return count != 10
-                  ? ListTile(
-                      title: Text("Indes $index"),
-                    )
-                  : Container();
+            delegate: SliverChildBuilderDelegate((context, count) {
+              return const ListTile(
+                title: Text("Index "),
+              );
             }),
           ),
         ],
