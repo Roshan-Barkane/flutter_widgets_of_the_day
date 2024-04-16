@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets_of_the_day/pages/customscollview.dart';
+import 'package:flutter_widgets_of_the_day/pages/stream_builder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CustomScrollViewWidget(),
+      home: const Stream_Builder(),
     );
   }
 }
