@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_widgets_of_the_day/pages/fadetrasition.dart';
-import 'package:flutter_widgets_of_the_day/pages/floatactionbutton.dart';
-import 'package:flutter_widgets_of_the_day/pages/pageview.dart';
-import 'package:flutter_widgets_of_the_day/pages/table.dart';
-//import 'package:flutter_widgets_of_the_day/pages/futurebuilder.dart';
-//import 'package:flutter_widgets_of_the_day/pages/animationcontainer.dart';
-//import 'package:flutter_widgets_of_the_day/pages/expanded.dart';
-//import 'package:flutter_widgets_of_the_day/pages/opacity.dart';
-//import 'package:flutter_widgets_of_the_day/pages/safearea.dart';
-//import 'package:flutter_widgets_of_the_day/pages/wrap.dart';
+import 'package:flutter_widgets_of_the_day/pages/customscollview.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Table_Widget(),
+      home: const CustomScrollViewWidget(),
     );
   }
 }
