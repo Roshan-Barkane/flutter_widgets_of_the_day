@@ -11,7 +11,12 @@ class _Stream_BuilderState extends State<Stream_Builder> {
   // make  a stream fuction becouse steam: are take steame function
   /* async replays async* , becouse its return multiple value with runing steam time */
   Stream<int> generator() async* {
-    yield 12;
+    while (true) {
+      await Future.delayed(
+        Duration(seconds: 2),
+      );
+      yield DateTime.now().second;
+    }
   }
 
   @override
@@ -25,7 +30,11 @@ class _Stream_BuilderState extends State<Stream_Builder> {
           StreamBuilder(
               stream: generator(),
               builder: (context, snapshot) {
-                return Text(snapshot.data.toString());
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return CircularProgressIndicator();
+                } else {
+                  return Text(snapshot.data.toString());
+                }
               })
         ],
       ),
