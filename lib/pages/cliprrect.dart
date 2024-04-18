@@ -29,7 +29,7 @@ class _ClipRRectWidgetState extends State<ClipRRectWidget> {
           color: Colors.yellow,
           child: ClipRRect(
             child: Image.asset("assets/p1.jpg"),
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(190),
             ),
             clipBehavior: Clip.hardEdge,
