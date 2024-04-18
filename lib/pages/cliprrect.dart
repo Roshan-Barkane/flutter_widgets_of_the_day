@@ -27,12 +27,23 @@ class _ClipRRectWidgetState extends State<ClipRRectWidget> {
       body: Center(
         child: Card(
           color: Colors.yellow,
-          child: ClipRRect(
-            child: Image.asset("assets/p1.jpg"),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(190),
-            ),
-            clipBehavior: Clip.hardEdge,
+          child: Column(
+            children: [
+              ClipRRect(
+                child: Image.asset("assets/p1.jpg"),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(190),
+                ),
+                clipBehavior: Clip.hardEdge,
+              ),
+              ClipRRect(
+                child: Image.asset("assets/p1.jpg"),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(190),
+                ),
+                clipBehavior: Clip.hardEdge,
+              ),
+            ],
           ),
         ),
       ),
