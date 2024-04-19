@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets_of_the_day/pages/cliprrect.dart';
+import 'package:flutter_widgets_of_the_day/pages/here2.dart';
 import 'package:flutter_widgets_of_the_day/pages/hero1.dart';
 
 void main() {
