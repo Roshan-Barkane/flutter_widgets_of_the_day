@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets_of_the_day/pages/cliprrect.dart';
+import 'package:flutter_widgets_of_the_day/pages/tooltip.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ClipRRectWidget(),
+      home: const TooltipWidget(),
     );
   }
 }
