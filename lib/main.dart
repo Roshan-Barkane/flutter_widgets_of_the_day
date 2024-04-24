@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets_of_the_day/pages/cliprrect.dart';
-import 'package:flutter_widgets_of_the_day/pages/tooltip.dart';
+import 'package:flutter_widgets_of_the_day/pages/filtterbox.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const TooltipWidget(),
+      home: const FiltterBox_Widget(),
     );
   }
 }
