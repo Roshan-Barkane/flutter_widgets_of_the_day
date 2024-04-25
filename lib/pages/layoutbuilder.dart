@@ -17,6 +17,32 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
             // take the width and height
             double width = constraints.maxWidth;
             double height = constraints.maxHeight;
+            // write the condition
+            if (width < 600) {
+              // Mobails Layout
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Container(
+                      height: 500,
+                      width: width,
+                      decoration: const BoxDecoration(
+                        color: Colors.blue,
+                      ),
+                    ),
+                    Container(
+                      height: 200,
+                      width: width,
+                      decoration: const BoxDecoration(
+                        color: Colors.red,
+                      ),
+                    )
+                  ],
+                ),
+              );
+            } else {
+              // PC Layout
+            }
           },
         ),
       ),
