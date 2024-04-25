@@ -10,6 +10,16 @@ class LayoutBuilderWidget extends StatefulWidget {
 class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: SafeArea(
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            // take the width and height
+            double width = constraints.maxWidth;
+            double height = constraints.maxHeight;
+          },
+        ),
+      ),
+    );
   }
 }
