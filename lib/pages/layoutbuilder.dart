@@ -36,6 +36,20 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
                       decoration: const BoxDecoration(
                         color: Colors.red,
                       ),
+                    ),
+                    GridView.builder(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2),
+                      itemCount: 10,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          width: width * 0.45,
+                          decoration: const BoxDecoration(
+                            color: Colors.green,
+                          ),
+                        );
+                      },
                     )
                   ],
                 ),
@@ -43,6 +57,7 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
             } else {
               // PC Layout
             }
+            return Container();
           },
         ),
       ),
