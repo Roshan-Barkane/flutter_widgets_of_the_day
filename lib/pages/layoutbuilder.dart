@@ -15,13 +15,14 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
         child: LayoutBuilder(
           builder: (context, constraints) {
             // take the width and height
-            double width = constraints.maxWidth;
+            double width = constraints.minWidth;
             double height = constraints.maxHeight;
             // write the condition
-            if (width < 600) {
+            if (height < 600) {
               // Mobails Layout
-              SingleChildScrollView(
+              return SingleChildScrollView(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       height: 500,
@@ -43,10 +44,14 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
                               crossAxisCount: 2),
                       itemCount: 10,
                       itemBuilder: (context, index) {
-                        return Container(
-                          width: width * 0.45,
-                          decoration: const BoxDecoration(
-                            color: Colors.green,
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: width * 0.45,
+                            height: 150,
+                            decoration: const BoxDecoration(
+                              color: Colors.green,
+                            ),
                           ),
                         );
                       },
@@ -57,7 +62,10 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
             } else {
               // PC Layout
             }
-            return Container();
+            return Container(
+              height: 100,
+              color: Colors.yellow,
+            );
           },
         ),
       ),
