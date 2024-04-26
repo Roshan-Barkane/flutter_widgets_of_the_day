@@ -42,19 +42,27 @@ class _AbsorbPinterWidgetState extends State<AbsorbPinter_Widget> {
               },
             ),
             GestureDetector(
-              child: Container(
-                height: 150,
-                width: 300,
-                child: const Card(
-                  elevation: 10,
-                  color: Colors.green,
-                  shape: BeveledRectangleBorder(
-                    side: BorderSide(color: Colors.black, width: 1),
+              child: AbsorbPointer(
+                absorbing: true,
+                child: GestureDetector(
+                  onTap: () {
+                    print("Color is blue");
+                  },
+                  child: Container(
+                    height: 150,
+                    width: 300,
+                    child: const Card(
+                      elevation: 10,
+                      color: Colors.green,
+                      shape: BeveledRectangleBorder(
+                        side: BorderSide(color: Colors.black, width: 1),
+                      ),
+                    ),
                   ),
                 ),
               ),
               onTap: () {
-                print("Color is green");
+                print("Color is green itset");
               },
             ),
           ],
