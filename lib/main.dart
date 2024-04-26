@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets_of_the_day/pages/filtterbox.dart';
-import 'package:flutter_widgets_of_the_day/pages/layoutbuilder.dart';
+import 'package:flutter_widgets_of_the_day/pages/absorbpointer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LayoutBuilderWidget(),
+      home: const AbsorbPinter_Widget(
+        title: "AbsorbPointer",
+      ),
     );
   }
 }
