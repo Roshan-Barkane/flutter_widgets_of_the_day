@@ -14,7 +14,10 @@ class HeroPage1 extends StatelessWidget {
         title: const Text(
           "Girl Dating 💥",
           style: TextStyle(
-              fontSize: 40, fontWeight: FontWeight.w500, color: Colors.white),
+            fontSize: 40,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
         ),
       ),
       body: ListView.builder(
