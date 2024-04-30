@@ -44,6 +44,16 @@ class _TansformWidgetState extends State<TansformWidget> {
             const SizedBox(
               height: 20,
             ),
+            Transform(
+              origin: Offset(800, 150),
+              transform: Matrix4.skewX(2.0),
+              child: Container(
+                height: 200,
+                width: 200,
+                color: Colors.blue,
+              ),
+            ),
+
             /* tanslate propety is not depand origin value its take offset set the position x and y direction */
             Transform.translate(
               offset: const Offset(100, 10),
