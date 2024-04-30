@@ -47,6 +47,7 @@ class _TansformWidgetState extends State<TansformWidget> {
             /* tanslate propety is not depand origin value its take offset set the position x and y direction */
             Transform.translate(
               offset: const Offset(100, 10),
+              filterQuality: FilterQuality.low,
               child: Container(
                 height: 200,
                 width: 200,
