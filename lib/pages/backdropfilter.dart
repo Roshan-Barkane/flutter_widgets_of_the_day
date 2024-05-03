@@ -30,37 +30,70 @@ class _BackDropFilterWidgetState extends State<BackDropFilterWidget> {
             ),
             child: Center(
               child: Container(
-                height: 250,
+                height: 350,
                 width: 350,
-                decoration: BoxDecoration(
-                  color: Colors.blue.shade50,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Column(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(top: 10),
-                      height: 50,
-                      child: const Text(
-                        "data",
-                        style: TextStyle(fontSize: 40),
+                child: Card(
+                  elevation: 20.0,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            height: 60,
+                            width: 60,
+                            decoration: BoxDecoration(
+                              color: Colors.blue.shade400,
+                            ),
+                            child: const Icon(
+                              Icons.close,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    const Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 20,
-                        ),
-                        Text(
-                          "Name of the Person",
-                          style: TextStyle(
-                            fontSize: 20,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10, bottom: 10),
+                        child: CircleAvatar(
+                          radius: 50,
+                          backgroundColor: Colors.blue,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(50),
+                            child: Image.asset(
+                              "assets/p4.jpg",
+                              fit: BoxFit.fill,
+                              width: 90,
+                            ),
                           ),
                         ),
-                        Icon(Icons.visibility),
-                      ],
-                    )
-                  ],
+                      ),
+                      const Row(
+                        children: [
+                          SizedBox(
+                            width: 60,
+                          ),
+                          Text(
+                            "Shobhi Sharma",
+                            style: TextStyle(
+                              fontSize: 25,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Icon(
+                            Icons.link,
+                            color: Colors.blue,
+                            size: 30,
+                          ),
+                        ],
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(20),
+                        child: const Text(
+                            "One time comes to product rules or sum rules how way solve it problem One time comes to product rules or sum rules how way solve it problem"),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
