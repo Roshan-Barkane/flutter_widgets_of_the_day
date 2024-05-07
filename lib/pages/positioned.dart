@@ -13,8 +13,24 @@ class PositionWidget extends StatelessWidget {
           color: Colors.orange.shade100,
           child: Stack(
             children: [
-              Container(height: 200, width: 200, color: Colors.yellow),
-              Container(height: 200, width: 200, color: Colors.blue),
+              Positioned(
+                top: 10,
+                left: 10,
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.yellow.shade700,
+                ),
+              ),
+              Positioned(
+                top: 20,
+                left: 20,
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.blue,
+                ),
+              ),
               Positioned(
                   bottom: 40,
                   left: MediaQuery.of(context).size.width / 2.5,
@@ -30,8 +46,24 @@ class PositionWidget extends StatelessWidget {
                       color: Colors.orange.shade100,
                     ),
                   )),
-              Container(height: 200, width: 200, color: Colors.black),
-              Container(height: 200, width: 200, color: Colors.green),
+              Positioned(
+                top: 40,
+                left: 40,
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.black,
+                ),
+              ),
+              Positioned(
+                top: 50,
+                left: 50,
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.green,
+                ),
+              ),
             ],
           ),
         ),
