@@ -10,9 +10,24 @@ class AnimatedBuilderWidget extends StatefulWidget {
 class _AnimatedBuilderWidgetState extends State<AnimatedBuilderWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: AnimatedBuilderFunction(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const AnimatedBuilderFunction(),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: 200,
+              child: const Text(
+                "PlayStore",
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.w500),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -56,15 +71,9 @@ class _AnimatedBuilderFunctionState extends State<AnimatedBuilderFunction>
         return Opacity(
           opacity: _animation.value,
           child: Container(
-            height: 140,
-            width: 140,
-            decoration: const BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.all(
-                Radius.circular(80),
-              ),
-            ),
-            child: Image.asset("name"),
+            height: 100,
+            width: 100,
+            child: Image.asset("assets/Playstore.png"),
           ),
         );
       },
