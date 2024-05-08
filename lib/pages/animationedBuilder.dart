@@ -56,9 +56,15 @@ class _AnimatedBuilderFunctionState extends State<AnimatedBuilderFunction>
         return Opacity(
           opacity: _animation.value,
           child: Container(
-            height: 200,
-            width: 200,
-            color: Colors.blue,
+            height: 140,
+            width: 140,
+            decoration: const BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.all(
+                Radius.circular(80),
+              ),
+            ),
+            child: Image.asset("name"),
           ),
         );
       },
