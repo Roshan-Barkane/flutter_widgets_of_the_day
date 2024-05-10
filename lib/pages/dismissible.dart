@@ -57,12 +57,43 @@ class _DismissibleWidgetState extends State<DismissibleWidget> {
                       backgroundColor: Colors.green,
                       content: Text(
                         fauilts[index],
+                        style: TextStyle(fontSize: 40),
                       ),
                     ),
                   );
                 }
               },
               key: Key(fruts),
+              background: Container(
+                width: 50,
+                color: Colors.green,
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Icon(
+                      Icons.add,
+                      size: 40,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              secondaryBackground: Container(
+                color: Colors.red,
+                width: 50,
+                child: const Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Icon(
+                      Icons.delete,
+                      size: 40,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
               child: Card(
                 child: ListTile(
                   title: Text(
