@@ -16,8 +16,8 @@ class SizeboxedWidget extends StatelessWidget {
       /* ElevatedButton not having and size property so apply the size with sixeBoxed */
       body: Center(
         child: SizedBox(
-          height: 50,
-          width: 200,
+          height: double.infinity,
+          width: double.infinity,
           child: ElevatedButton(
             onPressed: () {},
             child: const Text(
