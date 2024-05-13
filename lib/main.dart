@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets_of_the_day/pages/animationedBuilder.dart';
-import 'package:flutter_widgets_of_the_day/pages/dismissible.dart';
 import 'package:flutter_widgets_of_the_day/pages/valuelistenablebuilder.dart';
-import 'package:flutter_widgets_of_the_day/sizeboxed.dart';
 
 void main() {
   runApp(const MyApp());

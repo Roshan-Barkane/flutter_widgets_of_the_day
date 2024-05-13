@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 
-class ValueListenableBuilderWidget extends StatefulWidget {
+final ValueNotifier<int> number = ValueNotifier(0);
+
+class ValueListenableBuilderWidget extends StatelessWidget {
   const ValueListenableBuilderWidget({super.key});
 
-  @override
-  State<ValueListenableBuilderWidget> createState() =>
-      _ValueListenableBuilderState();
-}
-
-class _ValueListenableBuilderState extends State<ValueListenableBuilderWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +22,9 @@ class _ValueListenableBuilderState extends State<ValueListenableBuilderWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                number.value += 1;
+              },
               child: const Icon(
                 Icons.arrow_upward_outlined,
                 size: 40,
@@ -35,9 +33,14 @@ class _ValueListenableBuilderState extends State<ValueListenableBuilderWidget> {
             const SizedBox(
               height: 20,
             ),
-            const Text(
-              "value",
-              style: TextStyle(fontSize: 35),
+            ValueListenableBuilder(
+              valueListenable: number,
+              builder: (context, value, child) {
+                return Text(
+                  '$value',
+                  style: const TextStyle(fontSize: 35),
+                );
+              },
             ),
           ],
         ),
