@@ -11,7 +11,10 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
   final _items = [];
   final GlobalKey<AnimatedListState> _key = GlobalKey();
   void _addItem() {
-    _items.insert(0, "Item ${_items.length + 1}");
+    _items.insert(
+      0,
+      "Item ${_items.length + 1}",
+    );
     _key.currentState!.insertItem(
       0,
       duration: const Duration(seconds: 1),
