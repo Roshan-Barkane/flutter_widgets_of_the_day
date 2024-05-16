@@ -30,7 +30,7 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
             child: ListTile(
               title: Text(
                 "Deleted",
-                style: TextStyle(fontSize: 24),
+                style: TextStyle(fontSize: 24, color: Colors.white),
               ),
             ),
           ),
@@ -83,7 +83,7 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
                   sizeFactor: animation,
                   child: Card(
                     margin: const EdgeInsets.all(10),
-                    color: Colors.orangeAccent,
+                    color: Colors.blue.shade400,
                     child: ListTile(
                       title: Text(
                         _items[index],
@@ -93,7 +93,10 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
                         onPressed: () {
                           _removeItem(index);
                         },
-                        icon: const Icon(Icons.delete),
+                        icon: const Icon(
+                          Icons.delete,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
