@@ -18,6 +18,28 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
     );
   }
 
+  void _removeItem(int index) {
+    _key.currentState?.removeItem(
+      index,
+      (context, animation) {
+        return SizeTransition(
+          sizeFactor: animation,
+          child: const Card(
+            margin: EdgeInsets.all(10),
+            color: Colors.red,
+            child: ListTile(
+              title: Text(
+                "Deleted",
+                style: TextStyle(fontSize: 24),
+              ),
+            ),
+          ),
+        );
+      },
+      duration: const Duration(milliseconds: 300),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +50,58 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
           "AnimatedList Widget",
           style: TextStyle(fontSize: 30, color: Colors.white),
         ),
+      ),
+      body: Column(
+        children: [
+          const SizedBox(
+            height: 10,
+          ),
+          Container(
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50), color: Colors.blue),
+            child: IconButton(
+              onPressed: () {
+                _addItem();
+              },
+              icon: const Icon(
+                Icons.add,
+                color: Colors.white,
+                size: 35,
+              ),
+            ),
+          ),
+          Expanded(
+            child: AnimatedList(
+              key: _key,
+              initialItemCount: 0,
+              padding: const EdgeInsets.all(10),
+              itemBuilder: (context, index, animation) {
+                return SizeTransition(
+                  key: UniqueKey(),
+                  sizeFactor: animation,
+                  child: Card(
+                    margin: const EdgeInsets.all(10),
+                    color: Colors.orangeAccent,
+                    child: ListTile(
+                      title: Text(
+                        _items[index],
+                        style: const TextStyle(fontSize: 24),
+                      ),
+                      trailing: IconButton(
+                        onPressed: () {
+                          _removeItem(index);
+                        },
+                        icon: const Icon(Icons.delete),
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
