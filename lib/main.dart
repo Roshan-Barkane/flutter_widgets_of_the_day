@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets_of_the_day/pages/animatedlist.dart';
 import 'package:flutter_widgets_of_the_day/pages/valuelistenablebuilder.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ValueListenableBuilderWidget(),
+      home: const AnimatedListWidget(),
     );
   }
 }
