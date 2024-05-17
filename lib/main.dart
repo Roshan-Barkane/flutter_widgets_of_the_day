@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets_of_the_day/pages/animationedBuilder.dart';
 import 'package:flutter_widgets_of_the_day/pages/dismissible.dart';
+import 'package:flutter_widgets_of_the_day/pages/mediaquery.dart';
 import 'package:flutter_widgets_of_the_day/sizeboxed.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SizeboxedWidget(),
+      home: const MediaQueryWidgets(),
     );
   }
 }
