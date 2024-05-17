@@ -13,9 +13,10 @@ class _MediaQueryWidgetsState extends State<MediaQueryWidgets> {
     return Scaffold(
       body: Center(
         child: Container(
-          height: 200,
-          width: 300,
-          decoration: BoxDecoration(color: Colors.blue),
+          // add the height with MediaQuery
+          height: MediaQuery.of(context).size.height / 2,
+          width: MediaQuery.of(context).size.width / 1.2,
+          decoration: const BoxDecoration(color: Colors.blue),
         ),
       ),
     );
