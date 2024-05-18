@@ -18,10 +18,16 @@ class SpacerWidget extends StatelessWidget {
             width: 60,
             color: Colors.purple,
           ),
+          // if not given flex value its take automaticaly all remaining width and height.
+          const Spacer(),
           Container(
             height: 60,
             width: 60,
             color: Colors.green,
+          ),
+          // if is takeing flex value white divide remaining width and height with flex value.
+          const Spacer(
+            flex: 5,
           ),
           Container(
             height: 60,
