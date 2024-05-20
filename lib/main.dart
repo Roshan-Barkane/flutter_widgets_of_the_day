@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets_of_the_day/pages/spacer.dart';
+import 'package:flutter_widgets_of_the_day/pages/animatedicons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SpacerWidget(),
+      home: const AnimatedIconsWidget(),
     );
   }
 }
